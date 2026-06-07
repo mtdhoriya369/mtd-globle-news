@@ -1,0 +1,6 @@
+{
+  "name": "mtd global news",
+  "description": "An international news agency platform with breaking news ticker, comprehensive news sections (World, Business, Tech, Energy/Economy), and fully customizable real-time admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&family=Roboto:wght@300;400;500;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+:root {
+  --primary-color: #0a1e3c;
+  --secondary-color: #c0392b;
+  --bg-color: #f4f4f4;
+  --text-color: #1f2937;
+  --card-bg-color: #ffffff;
+  --card-border-color: #e5e7eb;
+  --font-family-current: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family-current);
+  transition: background-color 0.2s ease, color 0.15s ease;
+  overflow-x: hidden;
+}
+
+/* Dynamic Font classes */
+.font-custom {
+  font-family: var(--font-family-current);
+}
+
+/* Custom CSS helper animations and ticker styling */
+@keyframes tickerMarquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-ticker-marquee {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: tickerMarquee 45s linear infinite;
+}
+
+.animate-ticker-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Helper dynamic class proxies */
+.bg-custom-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-custom-secondary {
+  background-color: var(--secondary-color);
+}
+
+.text-custom-primary {
+  color: var(--primary-color);
+}
+
+.text-custom-secondary {
+  color: var(--secondary-color);
+}
+
+.border-custom-primary {
+  border-color: var(--primary-color);
+}
+
+.border-custom-secondary {
+  border-color: var(--secondary-color);
+}
+
+.bg-custom-card {
+  background-color: var(--card-bg-color);
+}
+
+.border-custom-card {
+  border-color: var(--card-border-color);
+}
+
+/* Custom scrollbar for modern news look */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  filter: brightness(1.2);
+}
